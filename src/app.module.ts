@@ -2,8 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { Salad } from './salad/salad.entity';
-import { SaladModule, ENTITIES as SaladEntities } from './salad/salad.module';
+import { SaladModule } from './salad/salad.module';
 
 @Module({
   imports: [
@@ -15,7 +14,7 @@ import { SaladModule, ENTITIES as SaladEntities } from './salad/salad.module';
       password: 'password',
       database: 'salad-maria',
       synchronize: true,
-      entities: [...SaladEntities],
+      autoLoadEntities: true,
     }),
     SaladModule,
   ],
