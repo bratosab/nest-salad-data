@@ -1,8 +1,8 @@
 import { Controller, Get, Param } from '@nestjs/common';
-import { EventPattern, MessagePattern } from '@nestjs/microservices';
-import { Dressing } from 'src/entities/dressing.entity';
-import { Topping } from 'src/entities/topping.entity';
+import { MessagePattern } from '@nestjs/microservices';
+import { Dressing } from '../entities/dressing.entity';
 import { Salad } from '../entities/salad.entity';
+import { Topping } from '../entities/topping.entity';
 import { SaladService } from './salad.service';
 
 @Controller('salad')

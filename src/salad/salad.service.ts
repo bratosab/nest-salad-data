@@ -1,10 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { MessagePattern } from '@nestjs/microservices';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Dressing } from 'src/entities/dressing.entity';
-import { Topping } from 'src/entities/topping.entity';
 import { Repository } from 'typeorm';
+import { Dressing } from '../entities/dressing.entity';
 import { Salad } from '../entities/salad.entity';
+import { Topping } from '../entities/topping.entity';
 
 @Injectable()
 export class SaladService {
